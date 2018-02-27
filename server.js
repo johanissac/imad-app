@@ -10,8 +10,33 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article1', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+  res.send(createTemplate(article1));
 });
+
+function createTemlate (data) {
+    var title = data.title;
+    var conetent = data.content;
+    var htmlTemplate= `
+    <html>
+        <head>
+            <title>
+               ${title}
+            </title>
+        </head>
+        <body>
+            <div>
+                <a href="/">Home</a>
+            </div>
+            <hr/>
+            <h3>
+                ${content} 
+            </h3>
+        </body>
+        
+    </html>
+    `;
+    return htmlTemplate;
+}
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
