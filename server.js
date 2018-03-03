@@ -32,7 +32,7 @@ app.get('/article1', function (req, res) {
   res.send(createTemplate(article1));
 });
 
-function createTemlate (data) {
+/*function createTemlate (data) {
     var title = data.title;
     var conetent = data.content;
     var htmlTemplate= `
@@ -55,7 +55,7 @@ function createTemlate (data) {
     </html>
     `;
     return htmlTemplate;
-}
+}*/
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
