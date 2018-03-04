@@ -40,7 +40,7 @@ app.get('/article1', function (req, res) {
   res.send(createTemplate(articleone));
 });
 
-function createTemlate (data) {
+function createTemplate (data) {
     var title = data.title;
     var content = data.content;
     var htmlTemplate= `
