@@ -12,6 +12,7 @@ var config={
 }*/
 var app = express();
 app.use(morgan('combined'));
+
 var articleone = {
     title: 'Article One',
     heading: 'Article one',
@@ -41,7 +42,7 @@ app.get('/article1', function (req, res) {
 
 function createTemlate (data) {
     var title = data.title;
-    var conetent = data.content;
+    var content = data.content;
     var htmlTemplate= `
     <html>
         <head>
