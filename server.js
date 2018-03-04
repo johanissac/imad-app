@@ -12,6 +12,13 @@ var config={
 }*/
 var app = express();
 app.use(morgan('combined'));
+var articleone = {
+    title: 'Article One',
+    heading: 'Article one',
+    content: `<p>
+            Article
+            </p>`
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -29,7 +36,7 @@ app.get('/test-db',function(req,res){
 });*/
 
 app.get('/article1', function (req, res) {
-  res.send(createTemplate(article1));
+  res.send(createTemplate(articleone));
 });
 
 /*function createTemlate (data) {
