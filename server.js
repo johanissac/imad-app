@@ -39,7 +39,7 @@ app.get('/article1', function (req, res) {
   res.send(createTemplate(articleone));
 });
 
-/*function createTemlate (data) {
+function createTemlate (data) {
     var title = data.title;
     var conetent = data.content;
     var htmlTemplate= `
@@ -62,7 +62,7 @@ app.get('/article1', function (req, res) {
     </html>
     `;
     return htmlTemplate;
-}*/
+}
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
