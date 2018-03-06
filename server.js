@@ -36,6 +36,10 @@ app.get('/test-db',function(req,res){
     });
 });
 */
+app.get('/jobson', function (req, res) {
+   res.sendFile(path.join(__dirname, 'ui', 'head.html'));
+});
+
 app.get('/article1', function (req, res) {
   res.send(createTemplate(articleone));
 });
