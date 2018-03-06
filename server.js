@@ -39,7 +39,7 @@ app.get('/test-db',function(req,res){
 app.get('/jobson', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'page.html'));
 });
-app.get('/ui/head.html', function (req, res) {
+app.get('/head.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'page.html'));
 });
 app.get('/article1', function (req, res) {
